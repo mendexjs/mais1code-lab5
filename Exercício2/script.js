@@ -1,26 +1,26 @@
 let number1 = 200;
 let number2 =  25;
-let multiplicacao = number1 * number2;   
-let soma = number1 + number2;
-let subtracao = number1 - number2;
-let divisao = number1 / number2;
-let operacao = divisao;
+let operacao = '/';
 
 switch (operacao) {
-    case soma:
-        // console.log('O valor da soma é: ' +soma)
+    case '+':
+        res = number1 + number2
+        console.log(res);
         break;
 
-    case subtracao:
-        //console.log('O valor sa subtração é: ' +subtracao)
+    case '-':
+        res = number1 - number2
+        console.log(res)
         break;
 
-    case divisao:
-        console.log('O valor da divisao é: ' +divisao)
+    case '*':
+        res = number1 * number2
+        console.log(res)
     break;
 
-    case multiplicacao:
-    //  console.log('O valor da operação e: ' +multiplicacao); 
+    case '/':
+        res = number1 / number2
+        console.log(res)
         break;
 
     default:
