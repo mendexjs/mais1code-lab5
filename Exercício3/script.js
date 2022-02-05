@@ -3,33 +3,65 @@ const testes = [
     {
         num1: 25,
         num2: 10,
-        operador:'+' ,
-        resultado: 25 + 10
+        operator:'+' 
     },
     {
         num1: 10,
         num2: 5,
-        operador:'-', 
-        resultado: 10 - 5
+        operator:'-'
     },
     {
         num1: 40,
         num2: 21,
-        operador:'*' ,
-        resultado: 40 - 21
+        operator:'*' 
     },
     {
         num1: 65,
         num2: 42,
-        operador:'/' ,
-        resultado: 65 / 42
+        operator:'/' 
     }
+
 ]
 
-testes.forEach((elemento)=>{
-    console.log(`Número1: ${elemento.num1} ${elemento.operador} Número2: ${elemento.num2} = ${elemento.resultado}`);
-    //console.log(` Número 1 ${testes.num1} ${testes.operador} Número 2 ${testes.num2} Resultado:`)
-})
+const sub = (num1,num2) => num1 - num2
+const soma = (num1,num2) => num1 + num2
+const mult = (num1,num2) => num1 * num2
+const div = (num1,num2) => num1 / num2
+
+const calculate = (num1,num2,operator)=>{
+    switch (operator) {
+        case '+':
+           return soma(num1,num2)
+            break;
+
+        case '-':
+            return sub(num1,num2)
+            break;
+
+        case '*':
+            return mult(num1,num2)
+        break;
+
+        case '/':
+            return div(num1,num2)
+            break;
+    
+        default:
+
+            break;
+    }
+}
+
+testCases.forEach((calculo) =>{
+    console.log(
+        calculate(
+            calculo.num1,
+            calculo.num2,
+            calculo.operator)
+    );
+});
+// console.log(`Número1: ${elemento.num1} ${elemento.operador} Número2: ${elemento.num2} = ${resultado}`);
+
 
 
 
